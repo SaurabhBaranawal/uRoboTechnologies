@@ -1,0 +1,234 @@
+#document{
+	overflow: hidden;
+}
+#document.boxed{
+    max-width: 1250px;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2);
+}
+#document > * + *{
+	margin-top: 40px;
+}
+#document > #main_slider_section,
+#document > #page_title_section,
+#document > #footer_widgets + #site_footer,
+#scroll_to_top{
+	margin-top: auto;
+}
+#document > #site_header,
+#sticky,
+#document > #mobile_header{
+	margin-top: auto;
+}
+.ingenious_layout_container{
+	position: relative;
+	width: 1170px;
+	margin: 0 auto;
+}
+
+#top_panel,
+#site_header{
+	position: relative;
+}
+#top_panel{
+	z-index: 3;
+}
+.site_header{
+	z-index: 2;
+}
+#fs_video_slider > .fs_video_bg{
+	z-index: 1;
+}
+#page{
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+/* SIDEBAR LAYOUT */
+#page_content{
+	width: 100%;
+}
+#page.single_sidebar #page_content{
+	width:870px;
+}
+#page.double_sidebar #page_content{
+	width:570px;
+}
+.sidebar{
+	border: 1px solid #e1e0de;
+	width:270px;
+	overflow: hidden !important;
+}
+
+.sidebar .theiaStickySidebar{
+	overflow: hidden !important;
+}
+
+#left_sidebar{
+	margin-right:30px;
+}
+#right_sidebar{
+	margin-left:30px;
+}
+
+/* \SIDEBAR LAYOUT*/
+
+/* OUTPUT ORDER*/
+#page > .ingenious_layout_container{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+#left_sidebar{
+   -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+}
+#right_sidebar{
+   -webkit-box-ordinal-group: 4;
+   -moz-box-ordinal-group: 4;
+   -webkit-order: 3;
+   -ms-flex-order: 3;
+   order: 3;	
+}
+#page.single_sidebar #page_content,
+#page.double_sidebar #page_content{
+   -webkit-box-ordinal-group: 3;
+   -moz-box-ordinal-group: 3;
+   -webkit-order: 2;
+   -ms-flex-order: 2;
+   order: 2;	
+}
+/* \OUTPUT ORDER*/
+
+/* FOR IE 9 */
+#page > .ingenious_layout_container,
+#page > .ingenious_layout_container > *{
+	display: block\9;
+}
+#left_sidebar,
+#page_content{
+	float: left\9;
+}
+#right_sidebar{
+	float: right\9;
+}
+#page.single_sidebar > .ingenious_layout_container:after,
+#page.double_sidebar > .ingenious_layout_container:after{
+	display: none;
+}
+#page.single_sidebar > .ingenious_layout_container:after,
+#page.double_sidebar > .ingenious_layout_container:after{
+	content: "";
+	display: block\9;
+	clear: both\9;
+}
+/*\FOR IE 9	 */
+
+
+/*
+RESPONSIVE
+*/
+@media screen and ( max-width: 1190px ){
+	#document.boxed{
+		max-width: 1000px;		
+	}
+	.ingenious_layout_container{
+		width: 940px;		
+	}
+	#page.single_sidebar #page_content{
+		width:700px;
+	}
+	#page.double_sidebar #page_content{
+		width:460px;
+	}
+	.sidebar{
+		width:220px;
+	}
+	#page > .ingenious_layout_container > .sidebar#left_sidebar{
+		margin-right:20px;
+	}
+	#page > .ingenious_layout_container > .sidebar#right_sidebar{
+		margin-left:20px;
+	}	
+}
+
+@media screen and ( max-width: 980px ){
+	#document.boxed{
+		max-width: 788px;	
+	}
+	.ingenious_layout_container{
+		width: 738px;	
+	}
+	#page.single_sidebar #page_content,
+	#page.double_sidebar #page_content,
+	.sidebar{
+		width: 100%;
+	}
+	#page > .ingenious_layout_container > .sidebar#left_sidebar{
+		margin-right: auto;
+	}
+	#page > .ingenious_layout_container > .sidebar#right_sidebar{
+		margin-left: auto;
+	}
+	#page > .ingenious_layout_container > *{
+		margin-top: 40px;
+	}
+	#page > .ingenious_layout_container{
+		-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	}
+	#page.single_sidebar #page_content,
+	#page.double_sidebar #page_content,
+	#page #page_content{
+	   -webkit-box-ordinal-group: 2;
+	    -moz-box-ordinal-group: 2;
+	    -webkit-order: 1;
+	    -ms-flex-order: 1;
+	    order: 1;
+	}
+	#page .sidebar#left_sidebar{
+	   -webkit-box-ordinal-group: 3;
+	   -moz-box-ordinal-group: 3;
+	   -webkit-order: 2;
+	   -ms-flex-order: 2;
+	   order: 2;
+	}
+	#page .sidebar#right_sidebar{
+	   -webkit-box-ordinal-group: 4;
+	   -moz-box-ordinal-group: 4;
+	   -webkit-order: 3;
+	   -ms-flex-order: 3;
+	   order: 3;	
+	}
+	#page_content,
+	.sidebar#left_sidebar,
+	.sidebar#right_sidebar{
+		float: none\9;
+	}
+	#page > .ingenious_layout_container:after{
+		display: none\9;
+	}
+}
+@media screen and ( max-width: 767px ){
+	.ingenious_layout_container{
+		width: auto;
+		margin-left: 20px;
+		margin-right: 20px;			
+	}
+}
+
+@media screen and ( max-width: 479px ){
+	#page > .ingenious_layout_container > * {
+	    margin-top: 0px;
+	}
+}
+/*
+\RESPONSIVE
+*/
