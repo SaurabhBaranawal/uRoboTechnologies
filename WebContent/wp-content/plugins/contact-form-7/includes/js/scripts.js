@@ -343,6 +343,37 @@
 			} );
 		};
 
+		var yourName = jQuery("#your-name").val();
+		var email = jQuery("#your-email").val();
+		var contactNo = jQuery("#your-number").val();
+		var yourMessage = jQuery("#your-message").val();
+		
+		jQuery("#your-name").change(function(){
+			jQuery("#your-name").css("box-shadow","none");
+		});
+		
+		jQuery("#your-email").change(function(){
+			jQuery("#your-email").css("box-shadow","none");
+		});
+		
+		jQuery("#your-number").change(function(){
+			jQuery("#your-number").css("box-shadow","none");
+		});
+		if(yourName === ""){
+			jQuery("#your-name").css("box-shadow","0 0 5px 1px orangered");
+			return;
+		}
+		
+		if(email ===  ""){
+			jQuery("#your-email").css("box-shadow","0 0 5px 1px orangered");
+			return;
+		}
+		
+		if(contactNo === ""){
+			jQuery("#your-number").css("box-shadow","0 0 5px 1px orangered");
+			return;
+		}
+		
 		$.ajax( {
 			type: 'POST',
 			//url: wpcf7.apiSettings.getRoute(
