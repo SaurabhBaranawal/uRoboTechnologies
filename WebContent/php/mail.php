@@ -41,7 +41,7 @@ try {
     $mail->Body    = "From: ".$_REQUEST['your-email']."<br>Name:".$_REQUEST['your-name']."<br>Contact Number::".$_REQUEST['your-number']."<br><h3>".$_REQUEST['your-message']."</h3>";
     $mail->AltBody = $_REQUEST['your-message'];
 	
-	if(strcmp($_REQUEST['your-message'],"")!=0){
+	if(strcmp($_REQUEST['your-number'],"")!=0){
 		$mail->send();	
 	}
     echo 'Message has been sent';
