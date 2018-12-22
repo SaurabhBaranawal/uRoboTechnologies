@@ -343,34 +343,34 @@
 			} );
 		};
 
-		var yourName = jQuery("#your-name").val();
-		var email = jQuery("#your-email").val();
-		var contactNo = jQuery("#your-number").val();
-		var yourMessage = jQuery("#your-message").val();
+		var yourName = document.querySelector("#your-name").value;
+		var email = document.querySelector("#your-email").value;
+		var contactNo = document.querySelector("#your-contact").value;
+		var yourMessage = document.querySelector("#your-message").value;
 		
-		jQuery("#your-name").change(function(){
-			jQuery("#your-name").css("box-shadow","none");
+		document.querySelector("#your-name").addEventListener("change",function(){
+			document.querySelector("#your-name").style.boxShadow="none";
 		});
 		
-		jQuery("#your-email").change(function(){
-			jQuery("#your-email").css("box-shadow","none");
+		document.querySelector("#your-email").addEventListener("change",function(){
+			document.querySelector("#your-email").style.boxShadow="none";
 		});
 		
-		jQuery("#your-number").change(function(){
-			jQuery("#your-number").css("box-shadow","none");
+		document.querySelector("#your-contact").addEventListener("change",function(){
+			document.querySelector("#your-contact").style.boxShadow="none";
 		});
 		if(yourName === ""){
-			jQuery("#your-name").css("box-shadow","0 0 5px 1px orangered");
+			document.querySelector("#your-name").style.boxShadow="0 0 5px 1px orangered";
 			return;
 		}
 		
 		if(email ===  ""){
-			jQuery("#your-email").css("box-shadow","0 0 5px 1px orangered");
+			document.querySelector("#your-email").style.boxShadow="0 0 5px 1px orangered";
 			return;
 		}
 		
 		if(contactNo === ""){
-			jQuery("#your-number").css("box-shadow","0 0 5px 1px orangered");
+			document.querySelector("#your-contact").style.boxShadow="0 0 5px 1px orangered";
 			return;
 		}
 		
