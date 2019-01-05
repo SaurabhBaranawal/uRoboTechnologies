@@ -45,8 +45,8 @@ try {
 		$mail->send();	
 	}
     echo 'Message has been sent';
-    echo "<script>location.href='http://www.urobo-technologies.com';</script>";
+    echo "<script>location.href='https://www.urobo-technologies.com';</script>";
 } catch (Exception $e) {
     echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
-    echo "<script>location.href='http://www.urobo-technologies.com';</script>";
+    echo "<script>location.href='https://www.urobo-technologies.com';</script>";
 }
