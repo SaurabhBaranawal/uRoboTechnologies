@@ -14,6 +14,31 @@ div.wpcf7 .screen-reader-response {
 	border: 0;
 }
 
+@media(max-width: 730px){
+	.tp-parallax-wrap #slide-1-layer-31, .tp-parallax-wrap #slide-2-layer-31, .tp-parallax-wrap #slide-3-layer-31{
+		font-size: 30px !important;
+		line-height: 25px !important;
+		max-width: 260px !important;
+		width: 260px !important;
+		top: -25px !important;
+	}
+	
+	.tp-parallax-wrap #slide-1-layer-33, .tp-parallax-wrap #slide-2-layer-33, .tp-parallax-wrap #slide-3-layer-33{
+		font-size: 12px !important;
+		line-height: 11px !important;
+	}
+	
+	.tp-parallax-wrap #slide-1-layer-36, .tp-parallax-wrap #slide-2-layer-36, .tp-parallax-wrap #slide-3-layer-36{
+		top: 5px!important;
+		font-size: 10px !important;
+	}
+}
+
+.thankyou_message h4 {
+    font-size: 20px;
+    color: #59AB65 !important;
+}
+
 div.wpcf7-response-output {
 	margin: 2em 0.5em 1em;
 	padding: 0.2em 1em;
